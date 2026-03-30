@@ -98,6 +98,7 @@ Prove that the closure of a convex set is convex.
 You can check progress by inspecting the following files which will be updated by the agent as needed:
 
 - `Statement.md`: your theorem in ordinary mathematical language
+- `ProofExplanation.md`: a natural language version of the proof created after the Lean formalization
 - `Formalization.md`: the precise contract between the mathematics and the Lean statement
 - `./LeanProof/LeanProof/Problem.lean`: the Lean code
 - `PLANS.md`: short status and next-step file
