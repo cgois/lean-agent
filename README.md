@@ -1,4 +1,4 @@
-# Lean prover agent
+# Lean Proof Assistant
 
 This template helps you use an AI assistant to turn an informal mathematical statement into a Lean theorem and try to prove it.
 
