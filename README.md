@@ -1,4 +1,4 @@
-# Lean prover agent example
+# Lean Proof Assistant Example
 
 This is an example usage of the template in the `main` branch, where the agent proves the simple statement:
 
