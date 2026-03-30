@@ -1,11 +1,11 @@
-/-
+import Mathlib.Logic.Function.Basic
+
+/-!
 Main Lean development for the current theorem.
-Keep this file aligned with `../../Formalization.md`.
+This file is kept aligned with `../../Formalization.md`.
 -/
 
-/-
-Replace this placeholder theorem with the current target theorem once `Formalization.md`
-has been agreed.
--/
--- theorem target_statement : ... := by
---   ...
+theorem injective_comp {α β γ : Type*} {f : α → β} {g : β → γ}
+    (hf : Function.Injective f) (hg : Function.Injective g) :
+    Function.Injective (g ∘ f) := by
+  exact Function.Injective.comp hg hf

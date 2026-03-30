@@ -11,3 +11,5 @@
 /LeanProof/**/*.dll
 /LeanProof/**/*.dylib
 /LeanProof/**/*.exe
+
+*.swp

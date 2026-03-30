@@ -2,42 +2,42 @@
 
 ## Current phase
 
-`Phase 1: ambiguity detection`
+`Phase 5: human-readable proof explanation`
 
 ## Formalization status
 
-- `Formalization.md` status: `needs-clarification`
-- proof phase allowed: no
+- `Formalization.md` status: `proved`
+- proof phase allowed: yes
 
 ## Current target theorem
 
-[State the current target theorem in one or two lines.]
+If `f : α → β` and `g : β → γ` are injective, then `g ∘ f` is injective.
 
 ## Open ambiguities
 
-- None recorded yet.
+- none
 
 ## Current blocker
 
-[Describe the current blocker succinctly.]
+- none
 
 ## Next action
 
-[Describe the next action succinctly.]
+- keep files synchronized with the verified theorem state
 
 ## Verification status
 
-- `Formalization.md` written: no
-- `Formalization.md` checked against `./LeanProof/LeanProof/Problem.lean`: not checked yet
-- theorem statement mirrored into `./LeanProof/LeanProof/Problem.lean`: no
-- theorem statement matches `Formalization.md`: unknown
-- `lake build`: not run yet
-- simplification attempted: no
+- `Formalization.md` written: yes
+- `Formalization.md` checked against `./LeanProof/LeanProof/Problem.lean`: yes
+- theorem statement mirrored into `./LeanProof/LeanProof/Problem.lean`: yes
+- theorem statement matches `Formalization.md`: yes
+- `lake build`: succeeded via `./scripts/verify.sh`
+- simplification attempted: yes
 
 ## Current file focus
 
-`Statement.md`
+`ProofExplanation.md`
 
 ## Notes
 
-- none
+- simplification reduced the proof to a direct use of `Function.Injective.comp`

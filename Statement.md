@@ -1,6 +1,7 @@
 # Statement
 
-[Write here the informal mathematical statement to be formalized and proved.]
+Let f : α → β and g : β → γ be injective functions.
+Prove that g ∘ f is injective.
 
 ## Optional context
 
