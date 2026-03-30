@@ -10,8 +10,8 @@ Prove that g ∘ f is injective.
 You can check the result by inspecting files below. With the exception of `Statement.md`, they were generated with no intervention by the agent:
 
 - `Statement.md`: the theorem to be proven, written in ordinary mathematical language
+- `ProofExplanation.md`: a proof in natural language extracted after the Lean formalization
 - `Formalization.md`: the precise contract between the mathematics and the Lean statement
-- `ReadableProof.md`: a proof in natural language extracted after the Lean formalization
 - `./LeanProof/LeanProof/Problem.lean`: the Lean code
 - `PLANS.md`: short status and next-step file
 - `Worklog.md`: concise iteration log
