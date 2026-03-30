@@ -17,7 +17,6 @@ This repository is a template for using LLMs to formalize and prove a mathematic
 - `Worklog.md`: concise numbered iteration log.
 - `./LeanProof/LeanProof/Problem.lean`: the Lean development for the current theorem.
 - `scripts/verify.sh`: verification command for this template.
-- `scripts/check_no_placeholders.sh`: rejects `sorry`, `admit`, and `axiom` in Lean files.
 
 ## Required workflow
 

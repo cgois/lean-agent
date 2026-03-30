@@ -32,7 +32,6 @@
 - theorem statement mirrored into `./LeanProof/LeanProof/Problem.lean`: no
 - theorem statement matches `Formalization.md`: unknown
 - `lake build`: not run yet
-- `./scripts/check_no_placeholders.sh`: not run yet
 - simplification attempted: no
 
 ## Current file focus
