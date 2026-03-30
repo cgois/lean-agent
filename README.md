@@ -1,14 +1,10 @@
 # Lean Proof Assistant
 
-This is an AI assistant to create proofs of math statements.
-
-1. Turn an informal mathematical statement into a Lean theorem statement.
-2. Find a formalized proof in Lean.
-3. Translate the Lean proof into a human readable proof.
+This is an AI assistant to create proofs of math statements in both Lean and natural language.
 
 The idea is that __Lean serves as a verifier for the work of the agent__, to keep it from hallucinating.
 
-The end goal is to obtain a __natural language proof that can be verified by a human with no knowledge of Lean__.
+The end result is a __natural language proof that can be verified by a human with no knowledge of Lean__.
 
 (This README is for humans. The assistant workflow is defined in `AGENTS.md`.)
 
