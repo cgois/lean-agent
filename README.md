@@ -1,6 +1,14 @@
 # Lean Proof Assistant
 
-This template helps you use an AI assistant to turn an informal mathematical statement into a Lean theorem and try to prove it.
+This is an AI assistant to create proofs of math statements.
+
+1. Turn an informal mathematical statement into a Lean theorem statement.
+2. Find a formalized proof in Lean.
+3. Translate the Lean proof into a human readable proof.
+
+The idea is that __Lean serves as a verifier for the work of the agent__, to keep it from hallucinating.
+
+The end goal is to obtain a __natural language proof that can be verified by a human with no knowledge of Lean__.
 
 (This README is for humans. The assistant workflow is defined in `AGENTS.md`.)
 
@@ -104,3 +112,7 @@ You can check progress by inspecting the following files which will be updated b
 - `PLANS.md`: short status and next-step file
 - `Worklog.md`: concise iteration log
 - `AGENTS.md`: workflow rules for the assistant
+
+## Acknowledgments
+
+This builds on ideas coming from discussions with Jukka Suomela.
