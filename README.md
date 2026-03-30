@@ -12,11 +12,11 @@ To use this template you must have an AI assistant and a Lean installation confi
 
 You need a working [Lean installation](https://lean-lang.org/install/manual/) that can be used from the terminal.
 
-After installation, check that Lean works in your project by running in your project root:
+After installation, check that Lean works in your project by running from the Lean project root:
 
 ```bash
-lake build
-````
+cd LeanProof && lake build
+```
 
 ### AI assistant
 
@@ -24,7 +24,7 @@ Whatever assistant you use, it should be able to:
 
 - read and edit files in this repository,
 - run terminal commands in the repository root,
-- run Lean/Lake commands such as `lake build`,
+- run Lean/Lake commands such as `cd LeanProof && lake build`,
 - inspect compiler output and iterate on errors.
 
 #### Recommended assistants
@@ -55,14 +55,14 @@ Read AGENTS.md and Statement.md and follow the specified workflow.
 The assistant will ask clarification questions if the statement is ambiguous.
 Once you agree on the statement, review `Formalization.md` carefully and approve it.
 
-After approval, the assistant should continue by working on `./LeanProof/Problem.lean`.
+After approval, the assistant should continue by working on `./LeanProof/LeanProof/Problem.lean`.
 If the process is interrupted, you can restart it by asking the assistant to inspect the current files and continue from the current state.
 
 When the assistant finishes, you should:
 
-- check that `lake build` succeeds,
+- check that `cd LeanProof && lake build` succeeds,
 - review `Formalization.md` to make sure it still matches the intended theorem,
-- review the human-readable proof explanation in `ReadableProof.md` and ask the assistant to improve it if needed.
+- review the human-readable proof explanation in `ProofExplanation.md` and ask the assistant to improve it if needed.
 
 ### Notes
 
@@ -98,7 +98,7 @@ You can check progress by inspecting the following files which will be updated b
 
 - `Statement.md`: your theorem in ordinary mathematical language
 - `Formalization.md`: the precise contract between the mathematics and the Lean statement
-- `./LeanProof/Problem.lean`: the Lean code
+- `./LeanProof/LeanProof/Problem.lean`: the Lean code
 - `PLANS.md`: short status and next-step file
 - `Worklog.md`: concise iteration log
 - `AGENTS.md`: workflow rules for the assistant

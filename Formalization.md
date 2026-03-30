@@ -89,7 +89,7 @@ Template:
 4. **Overall theorem**
    - Lean theorem statement:
      ```lean
-     -- paste the current target theorem statement from ./LeanProof/Problem.lean here
+     -- paste the current target theorem statement from ./LeanProof/LeanProof/Problem.lean here
      ```
    - Overall equivalence assessment: [exact / not yet exact]
    - Remaining mismatch, if any: [describe precisely, or write `none`]
@@ -147,7 +147,7 @@ If this section is nonempty, set `Status` to `awaiting-approval` and do not ente
 
 ## Current target theorem in Lean
 
-Keep this synchronized with `./LeanProof/Problem.lean`.
+Keep this synchronized with `./LeanProof/LeanProof/Problem.lean`.
 
 ```lean
--- paste the current target theorem statement exactly as it appears in ./LeanProof/Problem.lean
+-- paste the current target theorem statement exactly as it appears in ./LeanProof/LeanProof/Problem.lean
