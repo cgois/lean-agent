@@ -15,7 +15,7 @@ This repository is a template for using LLMs to formalize and prove a mathematic
 - `Formalization.md`: the contract between the informal mathematics and the Lean theorem.
 - `PLANS.md`: the current execution plan and phase status.
 - `Worklog.md`: concise numbered iteration log.
-- `Problem.lean`: the Lean development for the current theorem.
+- `./LeanProof/Problem.lean`: the Lean development for the current theorem.
 - `scripts/verify.sh`: verification command for this template.
 - `scripts/check_no_placeholders.sh`: rejects `sorry`, `admit`, and `axiom` in Lean files.
 
@@ -56,13 +56,13 @@ Do not enter Phase 3 unless `Formalization.md` has status `approved` or the curr
 
 ### Phase 3: proof
 
-- State the target theorem in `Problem.lean` so that it matches `Formalization.md`.
-- If the theorem in `Problem.lean` does not yet match `Formalization.md`, stop and fix the mismatch before continuing.
-- Before each substantial proof attempt, re-check that the theorem currently stated in `Problem.lean` matches `Formalization.md`.
+- State the target theorem in `.LeanProof/Problem.lean` so that it matches `Formalization.md`.
+- If the theorem in `./LeanProof/Problem.lean` does not yet match `Formalization.md`, stop and fix the mismatch before continuing.
+- Before each substantial proof attempt, re-check that the theorem currently stated in `.LeanProof/Problem.lean` matches `Formalization.md`.
 - Work on exactly one target theorem at a time unless the user explicitly requests a broader development.
 - Attempt a proof using existing mathlib results and standard tactics first.
 - If helper lemmas are needed, add the smallest useful ones and keep them semantically close to the agreed statement.
-- After each substantial edit to `Problem.lean`, run `lake build` or `./scripts/build.sh`.
+- After each substantial edit to `./LeanProof/Problem.lean`, run `lake build` or `./scripts/build.sh`.
 - If verification fails, inspect the compiler or script output, identify the current blocker, and iterate.
 - Record each substantial iteration in `Worklog.md` and keep `PLANS.md` current.
 - Continue the edit–verify cycle until `./scripts/verify.sh` succeeds and there are no placeholders.
@@ -70,7 +70,7 @@ Do not enter Phase 3 unless `Formalization.md` has status `approved` or the curr
 
 #### Proof rules
 
-- Put the main theorem and all helper lemmas in `Problem.lean` unless the user explicitly wants another structure.
+- Put the main theorem and all helper lemmas in `.LeanProof/Problem.lean` unless the user explicitly wants another structure.
 - Search for existing mathlib lemmas and tactics before introducing bespoke helper lemmas.
 - Do not add broad imports unless they are necessary for the current theorem.
 - Prefer opening namespaces locally rather than globally when possible.
@@ -93,7 +93,7 @@ Once the proof succeeds and simplification is complete:
 - Write `ProofExplanation.md`.
 - Explain the proof in ordinary mathematical language.
 - State the main idea first, then the key steps.
-- For each substantial helper lemma in `Problem.lean`, explain its mathematical role.
+- For each substantial helper lemma in `./LeanProof/Problem.lean`, explain its mathematical role.
 - Do not merely paraphrase Lean tactics; explain the argument.
 - If the Lean proof is more technical than enlightening, say so explicitly.
 
@@ -131,7 +131,7 @@ Do not turn `Worklog.md` into a long essay.
 
 ## Edit discipline
 
-- Prefer edits that keep `Problem.lean` close to a compilable state.
+- Prefer edits that keep `./LeanProof/Problem.lean` close to a compilable state.
 - If a temporary non-compiling edit is necessary, verify again before making further conceptual changes.
 - Do not modify documentation unrelated to the current theorem unless necessary.
 - Do not rewrite the user's mathematical statement for convenience without asking for permission and recording the change in `Formalization.md`.
@@ -141,8 +141,8 @@ Do not turn `Worklog.md` into a long essay.
 A run is complete only if all of the following are true:
 
 - `./scripts/verify.sh` succeeds.
-- `Problem.lean` contains no `sorry`, `admit`, or `axiom`.
-- `Formalization.md` reflects the final theorem and final encoding choices actually used in `Problem.lean`.
-- The theorem in `Problem.lean` matches `Formalization.md`.
+- `./LeanProof/Problem.lean` contains no `sorry`, `admit`, or `axiom`.
+- `Formalization.md` reflects the final theorem and final encoding choices actually used in `./LeanProof/Problem.lean`.
+- The theorem in `./LeanProof/Problem.lean` matches `Formalization.md`.
 - Simplification has been attempted.
 - `PLANS.md` and `Worklog.md` reflect the final state.

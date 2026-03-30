@@ -55,7 +55,7 @@ Read AGENTS.md and Statement.md and follow the specified workflow.
 The assistant will ask clarification questions if the statement is ambiguous.
 Once you agree on the statement, review `Formalization.md` carefully and approve it.
 
-After approval, the assistant should continue by working on `Problem.lean`.
+After approval, the assistant should continue by working on `./LeanProof/Problem.lean`.
 If the process is interrupted, you can restart it by asking the assistant to inspect the current files and continue from the current state.
 
 When the assistant finishes, you should:
@@ -98,7 +98,7 @@ You can check progress by inspecting the following files which will be updated b
 
 - `Statement.md`: your theorem in ordinary mathematical language
 - `Formalization.md`: the precise contract between the mathematics and the Lean statement
-- `Problem.lean`: the Lean code
+- `./LeanProof/Problem.lean`: the Lean code
 - `PLANS.md`: short status and next-step file
 - `Worklog.md`: concise iteration log
 - `AGENTS.md`: workflow rules for the assistant

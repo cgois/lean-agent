@@ -1,0 +1,13 @@
+/LeanProof/.lake/
+/LeanProof/build/
+/LeanProof/.cache/
+/LeanProof/**/*.olean
+/LeanProof/**/*.ilean
+/LeanProof/**/*.c
+/LeanProof/**/*.cpp
+/LeanProof/**/*.o
+/LeanProof/**/*.obj
+/LeanProof/**/*.so
+/LeanProof/**/*.dll
+/LeanProof/**/*.dylib
+/LeanProof/**/*.exe

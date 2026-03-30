@@ -28,8 +28,8 @@
 ## Verification status
 
 - `Formalization.md` written: no
-- `Formalization.md` checked against `Problem.lean`: not checked yet
-- theorem statement mirrored into `Problem.lean`: no
+- `Formalization.md` checked against `./LeanProof/Problem.lean`: not checked yet
+- theorem statement mirrored into `./LeanProof/Problem.lean`: no
 - theorem statement matches `Formalization.md`: unknown
 - `lake build`: not run yet
 - `./scripts/check_no_placeholders.sh`: not run yet
