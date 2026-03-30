@@ -1,4 +1,4 @@
-# Lean + LLM theorem proving template
+# Lean prover agent
 
 This template helps you use an AI assistant to turn an informal mathematical statement into a Lean theorem and try to prove it.
 
@@ -45,11 +45,10 @@ The other working files are mainly produced and maintained by the assistant duri
 To start working on a theorem:
 
 1. Write your mathematical statement in `Statement.md`. Be as precise as possible.
-2. Start the assistant in the repository directory.
-3. Prompt it with:
+2. Start the assistant in the repository directory with:
 
-```text
-Read AGENTS.md and Statement.md and follow the specified workflow.
+```bash
+codex "Read AGENTS.md and Statement.md and follow the specified workflow."
 ```
 
 The assistant will ask clarification questions if the statement is ambiguous.
@@ -63,6 +62,8 @@ When the assistant finishes, you should:
 - check that `cd LeanProof && lake build` succeeds,
 - review `Formalization.md` to make sure it still matches the intended theorem,
 - review the human-readable proof explanation in `ProofExplanation.md` and ask the assistant to improve it if needed.
+
+An example run is provided in the branch `example`.
 
 ### Notes
 
