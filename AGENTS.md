@@ -85,21 +85,26 @@ Once the build succeeds and there are no placeholders:
 - After each simplification attempt, re-run `./scripts/verify.sh`.
 - Re-check `Formalization.md` against the final Lean theorem.
 
-### Phase 5: human-readable proof explanation
-
-Once the proof succeeds and simplification is complete:
-
-- Write `ProofExplanation.md`.
-- Explain the proof in ordinary mathematical language.
-- State the main idea first, then the key steps.
-- For each substantial helper lemma in `./LeanProof/LeanProof/Problem.lean`, explain its mathematical role.
-- Do not merely paraphrase Lean tactics; explain the argument.
-- If the Lean proof is more technical than enlightening, say so explicitly.
-
 #### Simplification rules
 
 - Do not change the statement, definitions, encodings, assumptions, or theorem scope.
 - Do not add any new assumptions or axioms.
+
+### Phase 5: human-readable proof explanation
+
+Once the proof succeeds and simplification is complete write `ProofExplanation.md`:
+
+- Explain the proof idea in ordinary mathematical language.
+- State the main idea first, then the key steps in the proof.
+- For each substantial helper lemma in `./LeanProof/LeanProof/Problem.lean`, explain its mathematical role in itself and for the proof.
+- Include complete proofs for each statement.
+
+#### Human-readable proof rules
+
+- Each statement must be fully proven in a self-contained way.
+- The proof must be inspectable *without the Lean code*.
+- Do not merely paraphrase Lean tactics; explain the argument.
+- If the Lean proof is more technical than enlightening, say so explicitly.
 
 ## Logging and planning
 
