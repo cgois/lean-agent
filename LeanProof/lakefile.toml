@@ -13,7 +13,12 @@ maxSynthPendingDepth = 3
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-rev = "v4.31.0"
+rev = "v4.30.0"
+
+[[require]]
+name = "QIT"
+git = "https://github.com/QuAIR/Lean-QIT.git"
+rev = "c3d2e09be48a9dfb98abf65bc175c8609cc6ac36"
 
 [[lean_lib]]
 name = "LeanProof"

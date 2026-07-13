@@ -1,10 +1,10 @@
 # Proof assistant
 
-This is an AI assistant to prove mathematical theorems.
+This is an AI assistant to prove finite-dimensional quantum information theorems. On top of `mathlib`, it includes [Lean-QIT](https://github.com/QuAIR/Lean-QIT), which provides APIs for states, channels, measurements, entanglement, nonlocality and related topics.
 
-The idea is that __Lean serves as a verifier for the work of the agent__, to keep it from hallucinating.
+The idea is that Lean serves as a verifier for the work of the agent, to keep it from hallucinating.
 
-The end result is a __natural language proof that can be verified by a human with no knowledge of Lean__.
+The end result is a natural language proof that can be verified by a human with no knowledge of Lean.
 
 (This README is for humans. The assistant workflow is defined in `AGENTS.md`.)
 
@@ -22,6 +22,10 @@ After installation, check that Lean works in your project by running from the Le
 cd LeanProof
 lake build
 ```
+
+When a proof imports substantial parts of mathlib, `lake exe cache get` can be
+used to download precompiled mathlib artifacts before building. This is optional
+and requires several gigabytes of disk space.
 
 ### AI assistant
 

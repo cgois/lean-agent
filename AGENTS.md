@@ -1,6 +1,6 @@
 # Workflow
 
-- Your goal is to prove the mathematical theorem in Statement.md completely.
+- Your goal is to prove the quantum information theorem in Statement.md completely.
 - Assume, for this purpose, that a proof exists.
 - Proceed according to instructions below, without skipping any phase.
 - Do not even think of returning before *all* phases below have been completed.
@@ -26,11 +26,11 @@
 ## Phase 3: Lean formalization
 
 - Formalize the hand proof in `./LeanProof/LeanProof/Problem.lean`.
-- Use `mathlib` definitions, proofs and tactics; only write new ones if absolutely necessary.
+- Use `mathlib` and `Lean-QIT` definitions, proofs and tactics; only write new ones if absolutely necessary.
 - Do not overengineer or overly abstract the proof: the simplest and shorter the better. 
 - Split the proof into verifiable steps and plan the formalization steps in advance.
 - Focus on the critical steps first; build scaffolding only once the crucial parts stand.
-- When the proof compiles with no `sorry`, `admit` or forbidden `axioms`, move to the next phase.
+- When the proof compiles with no `sorry`, `admit` or forbidden `axioms`, inspect `#print axioms <main theorem>`and confirm that it contains no `sorryAx` or non-standard Lean axioms, then move to the next phase.
 
 ## Phase 4: Natural language proof
 
