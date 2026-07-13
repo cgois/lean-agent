@@ -1,6 +1,6 @@
-# Lean Proof Assistant
+# Proof assistant
 
-This is an AI assistant to create proofs of math statements in both Lean and natural language.
+This is an AI assistant to prove mathematical theorems.
 
 The idea is that __Lean serves as a verifier for the work of the agent__, to keep it from hallucinating.
 
@@ -41,39 +41,18 @@ Whatever assistant you use, it should be able to:
 
 ## Usage
 
-For each new theorem, it is usually best to start from a fresh Git branch or a fresh copy of the template.
-
-In normal use, you only need to edit `Statement.md`.
-The other working files are mainly produced and maintained by the assistant during the formalization and proof process.
-
-To start working on a theorem:
-
-1. Write your mathematical statement in `Statement.md`. Be as precise as possible.
-2. Start the assistant in the repository directory with:
+1. Start from a fresh clone of this repository.
+2. Write the statement to be proven in `Statement.md`, specify all definitions unambiguously.
+3. Start the assistant in the repository directory with e.g.:
 
 ```bash
-codex "Read AGENTS.md and Statement.md and follow the specified workflow."
+codex "Read AGENTS.md and follow the specified workflow."
 ```
 
-The assistant will ask clarification questions if the statement is ambiguous.
-Once you agree on the statement, review `Formalization.md` carefully and approve it.
+When the assistant finishes, you will have:
 
-After approval, the assistant should continue by working on `./LeanProof/LeanProof/Problem.lean`.
-If the process is interrupted, you can restart it by asking the assistant to inspect the current files and continue from the current state.
-
-When the assistant finishes, you should:
-
-- check that `cd LeanProof && lake build` succeeds,
-- review `Formalization.md` to make sure it still matches the intended theorem,
-- review the human-readable proof explanation in `ProofExplanation.md` and ask the assistant to improve it if needed.
-
-An example run is provided in the branch `example`.
-
-### Notes
-
-- Do not start proof search if the statement is still ambiguous.
-- Review `Formalization.md` carefully: the most serious mistakes usually happen there, not in Lean syntax.
-- For nontrivial work, it is often better to keep one main theorem per branch or repository.
+- A natural language proof written in `Proof.tex`.
+- The Lean formalization in `./LeanProof/LeanProof/Problem.lean`.
 
 ### Example statements
 
@@ -99,16 +78,8 @@ Prove that the closure of a convex set is convex.
 
 ### File structure
 
-You can check progress by inspecting the following files which will be updated by the agent as needed:
-
-- `Statement.md`: your theorem in ordinary mathematical language
-- `ProofExplanation.md`: a natural language version of the proof created after the Lean formalization
-- `Formalization.md`: the precise contract between the mathematics and the Lean statement
-- `./LeanProof/LeanProof/Problem.lean`: the Lean code
-- `PLANS.md`: short status and next-step file
-- `Worklog.md`: concise iteration log
-- `AGENTS.md`: workflow rules for the assistant
+You can check progress by inspecting `Worklog.md` and `HandProof.md`.
 
 ## Acknowledgments
 
-This builds on ideas coming from discussions with Jukka Suomela.
+This builds on ideas coming from several sources, including discussions with Jukka Suomela, the prompt for ["A Proof of the Cycle Double Cover Conjecture"](https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_prompt.pdf), and ["Advancing Mathematics Research with AI-Driven Formal Proof Search"](https://arxiv.org/html/2605.22763v1).
