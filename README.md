@@ -1,6 +1,6 @@
 # Proof assistant
 
-This is an AI assistant to prove finite-dimensional quantum information theorems. On top of `mathlib`, it includes [Lean-QIT](https://github.com/QuAIR/Lean-QIT), which provides APIs for states, channels, measurements, entanglement, nonlocality and related topics.
+This is an AI assistant to prove finite-dimensional quantum information theorems. On top of `mathlib`, it includes the [`QuantumInfo`](https://github.com/leanprover-community/physlib/tree/master/QuantumInfo) part of Physlib.
 
 The idea is that Lean serves as a verifier for the work of the agent, to keep it from hallucinating.
 
