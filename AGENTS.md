@@ -5,7 +5,7 @@
 - Proceed according to instructions below, without skipping any phase.
 - Do not even think of returning before *all* phases below have been completed.
 - Public search may be used for literature background.
-- Use `Worklog.md` to a *telegraphic* log of progress and the current status in case you need to backtrack.
+Use `Worklog.md` to a *telegraphic* log of progress and the current status in case you are interrupted and need to resume later.
 
 ## Phase 1: Formalize Statement.md
 

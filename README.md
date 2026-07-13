@@ -59,6 +59,8 @@ When the assistant finishes, you will have:
 - A natural language proof written in `Proof.tex`.
 - The Lean formalization in `./LeanProof/LeanProof/Problem.lean`.
 
+If your rate limits are reached during the proof, wait until it is reset and prompt the agent to inspect `Worklog.md` and continue from where it stopped.
+
 ### Example statements
 
 *A good statement:*
