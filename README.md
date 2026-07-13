@@ -19,7 +19,8 @@ You need a working [Lean installation](https://lean-lang.org/install/manual/) th
 After installation, check that Lean works in your project by running from the Lean project root:
 
 ```bash
-cd LeanProof && lake build
+cd LeanProof
+lake build
 ```
 
 ### AI assistant
