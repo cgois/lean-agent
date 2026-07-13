@@ -2,9 +2,9 @@
 
 This is an AI assistant to prove mathematical theorems.
 
-The idea is that __Lean serves as a verifier for the work of the agent__, to keep it from hallucinating.
+The idea is that Lean serves as a verifier for the work of the agent, to keep it from hallucinating.
 
-The end result is a __natural language proof that can be verified by a human with no knowledge of Lean__.
+The end result is a natural language proof that can be verified by a human with no knowledge of Lean.
 
 (This README is for humans. The assistant workflow is defined in `AGENTS.md`.)
 
@@ -19,7 +19,8 @@ You need a working [Lean installation](https://lean-lang.org/install/manual/) th
 After installation, check that Lean works in your project by running from the Lean project root:
 
 ```bash
-cd LeanProof && lake build
+cd LeanProof
+lake build
 ```
 
 ### AI assistant
@@ -53,6 +54,8 @@ When the assistant finishes, you will have:
 
 - A natural language proof written in `Proof.tex`.
 - The Lean formalization in `./LeanProof/LeanProof/Problem.lean`.
+
+If your rate limits are reached during the proof, wait until it is reset and prompt the agent to inspect `Worklog.md` and continue from where it stopped.
 
 ### Example statements
 
